@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: leave_development
+  username: postgres
+  password: india123
+  host: localhost
+  pool: 2
+  timeout: 5000

@@ -1,0 +1,7 @@
+<div class="navbar row">
+        <div class="col-6 logo"> Leave Portal</div>
+        <div class="col-6 log-out">
+            <%= link_to "Logout" , destroy_user_session_path, method: :delete, class: 'btnlogt' %>
+            <%= link_to "leaves", new_leafe_path %>
+        </div>
+    </div>

@@ -1,0 +1,45 @@
+
+<h1>leave</h1>
+
+<%= form_with model: @leave do |form| %>
+<%= form.fields_for @user do |ff| %>
+                  <div class= "col-lg">
+                  <div class= "form-group,form-outline mb-4">
+                  <label>user_id </label>
+                   <%= ff.text_field :id,readonly: "true", class: 'form-control form-control-lg' %>
+                  </div>
+                  </div>
+
+              <% end %>
+ <div class= "col-lg">
+  <div class= "form-group,form-outline mb-4">
+  <div>
+<%= form.label :leave_type%><br>
+<%= form.select :leave_type, [ 'sick', 'casual','holiday','unpaid' ], class: 'form-control form-control-lg' %>
+  </div>
+  </div>
+  </div>
+
+
+ <div class= "col-lg">
+  <div class= "form-group,form-outline mb-4">
+
+  <div>
+    <%= form.label :total_allocate_leave %><br>
+    <%= form.number_field :total_allocate_leave, class: 'form-control form-control-lg'  %>
+  </div>
+
+ <div>
+ <div>
+ </div>
+
+ <%= form.label :used_leave %><br>
+    <%= form.number_field :used_leave, class: 'form-control form-control-lg' %>
+
+  <div>
+
+    <%= form.submit %>
+  </div>
+
+<% end %>
+

@@ -1,0 +1,24 @@
+<div class= "col-lg-12">
+ <div class= "card rounded-0 mt-5 mb-5">
+ <div class= "card-body">
+ <h2 class= "text-center"> Leave</h2>
+ </div>
+ </div>
+<div class= "row mt -3">
+<div class= "col-lg-12">
+<h3 class= "text-center mb -3"> User_leave </h3>
+<p class= "lead"> First Name:<%= @user_leave.user.first_name%></p>
+<p class= "lead"> Last Name:<%= @user_leave.user.last_name %></p>
+<p class= "lead"> Emails:<%= @user_leave.user.email %></p>
+<p class= "lead">allocate_leave:<%= @user_leave.leave.total_allocate_leave %></p>
+<p class= "lead">used_leave:<%= @user_leave.leave.used_leave %></p>
+<p class= "lead">leave_type:<%= @user_leave.leave.leave_type %></p>
+<p class= "lead">status:<%= @user_leave.leave_status %></p>
+<p class= "lead">no_of_leave:<%= @user_leave.no_of_leave%></p>
+
+</div>
+</div>
+</div>
+ <%= link_to "Back", user_leaves_path,:class => "btn btn-primary" %>
+
+

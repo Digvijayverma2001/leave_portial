@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  leave_status: 1
+  no_of_leave: 1
+  references: 
+  references: 
+
+two:
+  leave_status: 1
+  no_of_leave: 1
+  references: 
+  references: 

@@ -1,0 +1,99 @@
+
+.TableList {
+    margin: 0
+  }
+
+  .TableList h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #e44666;
+    margin: 0 0 15px 0
+  }
+
+  .TableList table {
+    margin: 0;
+    border: 1px solid #ddd
+  }
+
+  .TableList table th {
+
+    margin: 0;
+    border-bottom: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    padding: 10px 15px;
+    background: #f3f3f3;
+
+  }
+
+  .TableList table td {
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #5c5c5c;
+  }
+
+  .TableList table td figure {
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #d1d1d1;
+    border-radius: 10px
+  }
+
+
+.TableList table td span.Sold {
+    margin: 0;
+    border: 1px solid #cb304f;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    color: #024176;
+    font-weight: 700
+  }
+
+
+.TableList table tr td span {
+    padding: 4px 10px;
+    color: #fff;
+    border-radius: 5px;
+    width: auto;
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+    min-width: 90px;
+    font-weight: 600;
+  }
+
+
+
+
+.TableList table tr td span.Red {
+  background-color: #bb0f0f;
+}
+
+.TableList table tr td span.Green {
+    background-color: #37a713;
+  }
+
+.navbar{
+  background-color: #fab58d!important;
+}
+
+
+.btnlogt{
+  float: right;
+  background-color: #026776;
+ color:white;
+ font-size: 20px;
+ border-radius: 9px;
+}
+.btn {
+  border-radius: 21px;
+}
+.btn-red{
+  background-color: orange;
+  color: white;
+}

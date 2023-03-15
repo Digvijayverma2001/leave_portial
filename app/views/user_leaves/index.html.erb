@@ -1,0 +1,65 @@
+
+
+<div class="navbar row">
+        <div class="col-6 logo"> Leave Portal</div>
+        <div class="col-6 log-out">
+            <%= link_to "Logout" , destroy_user_session_path, method: :delete, class: 'btnlogt' %>
+        </div>
+    </div>
+
+
+
+<div class="TableList">
+
+ <table class ="table table-borderd">
+    <thead>
+     <tr>
+
+
+       <th>first_name</th>
+       <th>last_name</th>
+        <th>email</th>
+
+        <th>allocate_leave</th>
+        <th>used_leave</th>
+        <th>no_of_leave</th>
+        <th>status</th>
+        <th>leave_type</th>
+         <th>Action</th>
+     <tr>
+    </thead>
+    <tbody>
+
+     <% @user_leaves.each do |user_leave|%>
+       <tr>
+
+
+         <td><%= user_leave.user.first_name%></td>
+         <td><%= user_leave.user.last_name%></td>
+         <td><%= user_leave.user.email%></td>
+
+         <td><%= user_leave.leave.total_allocate_leave%></td>
+         <td><%= user_leave.leave.used_leave%></td>
+          <td><%= user_leave.no_of_leave%></td>
+
+         	 <td >
+				<span class="<%= user_leave.leave_status == "accepted" ? "Green" : user_leave.leave_status == "unrejected" ? "Red" : "Orange"%>">
+                <%= user_leave.leave_status.humanize %></span>
+             </td>
+
+             <td >
+				<span class="<%= user_leave.leave.leave_type == "sick" ? "Green" : user_leave.leave.leave_type == "casual" ? "Red" : "Orange"%>">
+                <%= user_leave.leave.leave_type.humanize %></span>
+			 </td>
+
+            <td><%= link_to "show", user_leafe_path(user_leave),:class => "btn btn-success" %>
+
+              <%= link_to "delete", user_leafe_path(user_leave),method: :delete ,data: {confirm: "are u sure"},:class => "btn btn-red" %>
+
+            </td>
+       </tr>
+    <% end %>
+
+   </tbody>
+  </table>
+ </div>

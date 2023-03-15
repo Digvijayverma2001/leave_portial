@@ -1,0 +1,30 @@
+
+    <h1>user_leave</h1>
+
+<%= form_with model: @user_leave do |form| %>
+  <%= form.fields_for @user do |ff| %>
+                 <div class= "col-lg">
+                  <div class= "form-group,form-outline mb-4">
+                  <label>user_id</label>
+                   <%= ff.text_field :id,readonly: "true", class: 'form-control form-control-lg' %>
+                  </div>
+                  </div>
+ <% end %>
+<div>
+<%= form.label :leave_status%><br>
+
+<%= form.select :leave_status, [ 'accepted','unrejected','rejected'], class: 'form-control form-control-lg' %>
+  </div>
+
+
+
+
+ <%= form.label :no_of_leave %><br>
+    <%= form.number_field :no_of_leave %>
+
+  <div>
+
+    <%= form.submit %>
+  </div>
+<% end %>
+
